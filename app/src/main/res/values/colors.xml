@@ -3,5 +3,7 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
-    <color name="colorFacebook"></color>
+    <color name="colorFacebook">#3b5998</color>
+    <color name="colorSpotify">#1db954</color>
+    <color name="colorTextoBotonesObs">#FFFFFF</color>
 </resources>
