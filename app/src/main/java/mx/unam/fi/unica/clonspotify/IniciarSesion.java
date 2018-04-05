@@ -52,6 +52,6 @@ public class IniciarSesion extends AppCompatActivity{
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        Toast.makeText(this,"Método onDestroy()",Toast.LENGTH_LONG).show();
+        Toast.makeText(this,"Método onDestroy() I",Toast.LENGTH_LONG).show();
     }
 }
