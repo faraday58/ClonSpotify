@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">ClonSpotify</string>
+    <string name="texto_escucha">Escucha tu música favorita</string>
+    <string name="texto_boton_registrate">Registrate Gratis</string>
+    <string name="texto_boton_facebook">Inicia sesión con Facebook</string>
+    <string name="texto_pregunta_cuenta">¿Ya tienes una cuenta?</string>
+    <string name="texto_boton_inicia_sesion">Iniciar Sesión</string>
+</resources>
