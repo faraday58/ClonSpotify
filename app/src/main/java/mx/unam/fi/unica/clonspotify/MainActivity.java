@@ -1,11 +1,10 @@
 package mx.unam.fi.unica.clonspotify;
 
-import android.animation.ValueAnimator;
 import android.content.Intent;
+import android.graphics.drawable.AnimationDrawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.view.animation.LinearInterpolator;
 import android.widget.Button;
 import android.widget.ImageView;
 
@@ -14,6 +13,7 @@ public class MainActivity extends AppCompatActivity {
     Button btnIniFacebook;
     Button btnIniSesion;
     ImageView imgvCon1;
+    AnimationDrawable conciertoAnimation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +21,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         imgvCon1 = (ImageView)findViewById(R.id.imgvCon1);
+        imgvCon1.setBackgroundResource(R.drawable.animation);
+        conciertoAnimation = (AnimationDrawable)imgvCon1.getBackground();
 
 
         btnIniFacebook = (Button)findViewById(R.id.btnIniFacebook);
@@ -30,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intentIniFacebook = new Intent(getApplicationContext(),RegistroFacebook.class);
                 startActivity(intentIniFacebook);
+
             }
         });
 
@@ -43,5 +46,11 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    @Override
+    public void onWindowFocusChanged(boolean hasFocus) {
+        super.onWindowFocusChanged(hasFocus);
+        conciertoAnimation.start();
     }
 }
