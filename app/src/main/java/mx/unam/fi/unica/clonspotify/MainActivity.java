@@ -10,6 +10,7 @@ import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
 //comentario
+    //comentario 2
     Button btnIniFacebook;
     Button btnIniSesion;
     ImageView imgvCon1;
