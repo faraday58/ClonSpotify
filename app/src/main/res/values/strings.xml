@@ -7,4 +7,10 @@
     <string name="texto_boton_inicia_sesion">Iniciar Sesión</string>
     <string name="texto_boton_aceptar">Aceptar</string>
     <string name="edt_usuario">correo@correo.com</string>
+    <string-array name="array_canciones">
+        <item>Quiero que me quieras</item>
+        <item>Tuesday</item>
+        <item>Precius</item>
+        <item>Immigrant Song</item>
+    </string-array>
 </resources>
