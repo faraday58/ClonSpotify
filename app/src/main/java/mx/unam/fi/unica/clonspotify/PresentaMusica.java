@@ -1,4 +1,7 @@
 package mx.unam.fi.unica.clonspotify;
+import android.media.AudioManager;
+import android.media.MediaPlayer;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -8,11 +11,14 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.IOException;
+
 public class PresentaMusica extends AppCompatActivity {
 
     String [] Canciones;
     ListView lstMusica;
     TextView txtvUsuario;
+    MediaPlayer mp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +38,13 @@ public class PresentaMusica extends AppCompatActivity {
 
 
         lstMusica.setOnItemClickListener(ItemListener());
+        lstMusica.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {
+                mp.stop();
+                return true;
+            }
+        });
 
 
     }
@@ -39,8 +52,21 @@ public class PresentaMusica extends AppCompatActivity {
     protected AdapterView.OnItemClickListener ItemListener(){
         return new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Toast.makeText(getApplicationContext(),Canciones[i],Toast.LENGTH_SHORT).show();
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l)
+            {
+                String [] Uri= Canciones[i].toString().split("/");
+
+                mp=new MediaPlayer();
+                mp.setAudioStreamType(AudioManager.STREAM_MUSIC);
+                try {
+                 mp.setDataSource(Canciones[i].toString());
+                 mp.prepare();
+                }
+                 catch (IOException e) {
+                    e.printStackTrace();
+                }
+                mp.start();
+                Toast.makeText(getApplicationContext(),"Escuchando " + Uri[4],Toast.LENGTH_SHORT).show();
             }
         };
     }

@@ -8,9 +8,9 @@
     <string name="texto_boton_aceptar">Aceptar</string>
     <string name="edt_usuario">correo@correo.com</string>
     <string-array name="array_canciones">
-        <item>Quiero que me quieras</item>
-        <item>Tuesday</item>
-        <item>Precius</item>
-        <item>Immigrant Song</item>
+        <item>http://mexiti.com/musica/jazzyfrenchy.mp3</item>
+        <item>http://mexiti.com/musica/anewbeginning.mp3</item>
+        <item>http://mexiti.com/musica/summer.mp3</item>
+        <item>http://mexiti.com/musica/ukulele.mp3</item>
     </string-array>
 </resources>
