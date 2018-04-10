@@ -5,4 +5,6 @@
     <string name="texto_boton_facebook">Inicia sesión con Facebook</string>
     <string name="texto_pregunta_cuenta">¿Ya tienes una cuenta?</string>
     <string name="texto_boton_inicia_sesion">Iniciar Sesión</string>
+    <string name="texto_boton_aceptar">Aceptar</string>
+    <string name="edt_usuario">correo@correo.com</string>
 </resources>
