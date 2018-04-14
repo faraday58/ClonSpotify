@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -19,12 +20,14 @@ public class PresentaMusica extends AppCompatActivity {
     ListView lstMusica;
     TextView txtvUsuario;
     MediaPlayer mp;
+    Button btnStop;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_presenta_musica);
 
+        btnStop = (Button)findViewById(R.id.btnStop);
         Canciones = getResources().getStringArray(R.array.array_canciones);
         lstMusica = (ListView)findViewById(R.id.lstvMusica);
         txtvUsuario =(TextView)findViewById(R.id.txtvUsuario);
@@ -38,16 +41,19 @@ public class PresentaMusica extends AppCompatActivity {
 
 
         lstMusica.setOnItemClickListener(ItemListener());
-        lstMusica.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
-            @Override
-            public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {
-                mp.stop();
-                return true;
-            }
-        });
+        btnStop.setOnClickListener(OnClickStop);
 
 
     }
+
+    protected View.OnClickListener OnClickStop= new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            mp.stop();
+
+
+        }
+    };
 
     protected AdapterView.OnItemClickListener ItemListener(){
         return new AdapterView.OnItemClickListener() {

@@ -7,6 +7,7 @@
     <string name="texto_boton_inicia_sesion">Iniciar Sesión</string>
     <string name="texto_boton_aceptar">Aceptar</string>
     <string name="edt_usuario">correo@correo.com</string>
+    <string name="text_boton_stop">Stop</string>
     <string-array name="array_canciones">
         <item>http://mexiti.com/musica/jazzyfrenchy.mp3</item>
         <item>http://mexiti.com/musica/anewbeginning.mp3</item>
