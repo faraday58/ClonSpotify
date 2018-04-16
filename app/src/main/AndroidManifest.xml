@@ -16,8 +16,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".RegistroFacebook"></activity>
-        <activity android:name=".IniciarSesion"></activity>
+        <activity android:name=".RegistroFacebook" />
+        <activity android:name=".IniciarSesion" />
+        <activity android:name=".Bienvenida" />
+        <activity android:name=".AcercaDeDialogo"></activity>
     </application>
 
 </manifest>

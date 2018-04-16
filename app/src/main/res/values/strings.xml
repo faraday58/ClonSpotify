@@ -5,4 +5,15 @@
     <string name="texto_boton_facebook">Inicia sesión con Facebook</string>
     <string name="texto_pregunta_cuenta">¿Ya tienes una cuenta?</string>
     <string name="texto_boton_inicia_sesion">Iniciar Sesión</string>
+    <string name="texto_boton_aceptar">Aceptar</string>
+    <!--Variable usuario para ocupar en putextra y bundle  -->
+    <string name="var_usuario_extra">usuario</string>
+    <string name="texto_edit_text_correo">ejemplo@ejemplo.com</string>
+    <string-array name="canciones">
+        <item>Na na na</item>
+        <item>La niña fresa</item>
+        <item>La nave del olvido</item>
+        <item>Movimiento Naranja</item>
+    </string-array>
+
 </resources>

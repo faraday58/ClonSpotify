@@ -1,5 +1,6 @@
 package mx.unam.fi.unica.clonspotify;
 
+import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.graphics.drawable.AnimationDrawable;
 import android.support.v7.app.AppCompatActivity;
@@ -7,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 //comentario
@@ -28,14 +30,7 @@ public class MainActivity extends AppCompatActivity {
 
         btnIniFacebook = (Button)findViewById(R.id.btnIniFacebook);
 
-        btnIniFacebook.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intentIniFacebook = new Intent(getApplicationContext(),RegistroFacebook.class);
-                startActivity(intentIniFacebook);
-
-            }
-        });
+        btnIniFacebook.setOnClickListener(onClickFacebook2);
 
         btnIniSesion=(Button)findViewById(R.id.btnIniSesion);
 
@@ -53,5 +48,19 @@ public class MainActivity extends AppCompatActivity {
     public void onWindowFocusChanged(boolean hasFocus) {
         super.onWindowFocusChanged(hasFocus);
         conciertoAnimation.start();
+    }
+
+    protected View.OnClickListener onClickFacebook2 = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            Intent intentIniFacebook = new Intent(getApplicationContext(),RegistroFacebook.class);
+            startActivity(intentIniFacebook);
+        }
+    };
+
+
+    public  void onClick(View v)
+    {
+        Toast.makeText(this, "Dando click",Toast.LENGTH_LONG).show();
     }
 }

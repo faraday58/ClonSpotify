@@ -26,7 +26,8 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnRegistrate"
+        android:onClick="onClick"
         android:layout_width="@dimen/dim_boton_width"
         android:layout_height="@dimen/dim_boton_heigh"
         android:textColor="@color/colorTextoBotonesObs"
@@ -52,7 +53,7 @@
         android:textColor="@color/colorTextoBotonesObs"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintTop_toBottomOf="@+id/btnRegistrate" />
 
     <Button
         android:id="@+id/btnIniSesion"
